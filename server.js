@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+// Create an Express application
 const app = express();
 
 // Define a route that returns a random number
@@ -10,8 +11,6 @@ app.get('/random', (req, res) => {
   res.json({ number: randomNumber });
 });
 
-// Create an Express application
-const app = express();
 
 // Middleware to parse request bodies
 app.use(bodyParser.urlencoded({ extended: false }));
